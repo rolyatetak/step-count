@@ -1,0 +1,99 @@
+@import url('https://rsms.me/inter/inter.css');
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+:root {
+  --primary-blue: #32444d;
+  --secondary-blue: #b3c3cc;
+  --primary-orange: #ff6719;
+  --secondary-orange: #ffaa80;
+}
+
+body {
+  background-color: #edf4f7;
+  font-size: 24px;
+  color: #32444d;
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 14px;
+  color: var(--secondary-blue);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+nav {
+  background-color: #f4f8fa;
+  padding: 48px;
+  position: sticky;
+}
+
+main {
+  padding: 48px;
+}
+
+rect {
+  fill: var(--primary-orange);
+  transition: fill 0.5s;
+}
+
+circle.actual {
+  fill: var(--primary-blue);
+  transition: fill 0.5s;
+}
+
+circle.actual:hover {
+  fill: var(--primary-orange);
+}
+
+text {
+ text-anchor: middle;
+ font-size: 14px;
+}
+
+.today g text {
+  fill: var(--secondary-orange);
+}
+
+text.steps {
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+g:hover text.steps {
+  opacity: 1;
+}
+
+circle.ring {
+  fill: none;
+  stroke: var(--secondary-blue);
+  stroke-width: 2px;
+  opacity: 0.25;
+}
+
+.month g text {
+    fill: var(--primary-blue);
+}
+
+text.day {
+  opacity: 1;
+  transition: opacity 0.25s;
+}
+
+g:hover text.day {
+  opacity: 0;
+}
+
+
